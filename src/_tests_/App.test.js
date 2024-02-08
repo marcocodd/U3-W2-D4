@@ -18,6 +18,13 @@ describe("General mounting compononents", () => {
    expect(bookCards.length).toEqual(arrayBooks.length);
   });
  });
+
+ it("Comment area mounting", () => {
+  render(<App />);
+
+  const formComment = screen.getByTestId("comment-area");
+  expect(formComment).toBeInTheDocument();
+ });
 });
 
 
